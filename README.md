@@ -55,6 +55,7 @@ This project is set up for Heroku deployment with Terraform for infrastructure m
 ```bash
 # Deploy infrastructure
 cd terraform
+cp terraform.tfvars.example terraform.tfvars  # then fill in your values
 terraform plan
 terraform apply
 
@@ -66,7 +67,29 @@ The app runs in the EU region (`eu`) on Heroku.
 
 ## API Documentation
 
-*Add your API endpoints documentation here as you build them*
+Interactive Swagger/OpenAPI docs are served at `/api/docs` when the API is running (e.g. http://localhost:3000/api/docs).
+
+| Method | Endpoint | Description |
+| ------ | -------- | ----------- |
+| `GET` | `/api/v1/processed-data` | List records with pagination, filtering and sorting |
+| `GET` | `/api/v1/processed-data/analytics` | Analytics overview |
+| `GET` | `/api/v1/processed-data/user/:userId` | All records for a user (404 if none) |
+| `GET` | `/api/v1/processed-data/:id` | A single record by ID (404 if not found) |
+
+### Query parameters for `GET /api/v1/processed-data`
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| `page` | number | Page number (default `1`) |
+| `limit` | number | Items per page, 1–100 (default `10`) |
+| `user_id` | string | Filter by user ID |
+| `brand` | string | Filter by brand |
+| `platform` | string | Filter by platform |
+| `search` | string | Search by name or email |
+| `sort_by` | string | `created_at`, `likes`, `reach` or `total_sales_attributed` |
+| `sort_order` | string | `ASC` |
+
+All query parameters are validated with `class-validator`; unknown parameters are rejected.
 
 ## Development
 
