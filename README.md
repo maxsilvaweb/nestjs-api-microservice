@@ -9,7 +9,7 @@ This API handles the backend logic for duel-based gameplay. It connects to a Pos
 ## Getting Started
 
 ### Prerequisites
-- Node.js (18+)
+- Node.js (22+)
 - Bun
 - PostgreSQL database
 

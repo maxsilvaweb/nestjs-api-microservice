@@ -32,7 +32,6 @@ async function bootstrap() {
     .setDescription('REST API for accessing processed advocacy data')
     .setVersion('1.0')
     .addTag('processed-data')
-    .addTag('health')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
