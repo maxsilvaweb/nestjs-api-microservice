@@ -1,10 +1,10 @@
 # NestJS REST API
 
-A backend service for managing duels and game interactions. Built with NestJS and TypeScript.
+A backend service that serves processed creator advocacy data (social posts, engagement and attributed sales) for the analytics dashboard. Built with NestJS and TypeScript.
 
 ## What's this?
 
-This API handles the backend logic for duel-based gameplay. It connects to a PostgreSQL database hosted on AWS RDS and is deployed on Heroku in the EU region.
+This API exposes paginated, filterable advocacy records and analytics. It connects to a PostgreSQL database hosted on AWS RDS and is deployed on Heroku in the EU region.
 
 ## Getting Started
 

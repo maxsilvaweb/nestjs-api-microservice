@@ -28,7 +28,7 @@ async function bootstrap() {
 
   // Swagger documentation
   const config = new DocumentBuilder()
-    .setTitle('Duel Advocacy Platform API')
+    .setTitle('Advocacy Platform API')
     .setDescription('REST API for accessing processed advocacy data')
     .setVersion('1.0')
     .addTag('processed-data')

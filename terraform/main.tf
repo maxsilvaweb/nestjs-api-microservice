@@ -11,7 +11,7 @@ provider "heroku" {
   # Set HEROKU_API_KEY environment variable
 }
 
-resource "heroku_app" "duel_api" {
+resource "heroku_app" "api" {
   name   = var.app_name  # Now uses variable
   region = "eu"  # This ensures EU deployment
   
@@ -26,5 +26,5 @@ resource "heroku_app" "duel_api" {
 }
 
 output "app_url" {
-  value = "https://${heroku_app.duel_api.name}.herokuapp.com"
+  value = "https://${heroku_app.api.name}.herokuapp.com"
 }

@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "duel-api",
+      "name": "nestjs-api-microservice",
       "dependencies": {
         "@nestjs/common": "^11.0.1",
         "@nestjs/config": "^4.0.2",
